@@ -1,0 +1,8 @@
+ultralytics (YOLOv11)
+opencv-python
+numpy
+torch
+torchvision
+torchreid
+filterpy
+scikit-learn
