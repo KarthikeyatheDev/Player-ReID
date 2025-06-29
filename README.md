@@ -42,15 +42,12 @@ pip install -r requirements.txt
 
 ```
 player_tracking/
-├── models/                 # YOLOv11 trained weights
-│   └── yolo_model.pt
-├── input_video/            # Input videos
-│   └── 15sec_input.mp4
-├── output_video/           # Processed output videos
-│   └── output_reid.mp4
-├── player_tracking.py      # Main tracking script
-├── requirements.txt        # Python dependencies
-├── README.md               # This file
+├── yolo_model.pt           # YOLOv11 trained weights
+├── Inputs                  # Input videos
+│   └── 15sec_input_720.mp4
+├── Output                  # Processed output videos
+│   └── output_new.mp4
+├── player_ReID.ipynb      # Main tracking script
 ```
 
 ---
@@ -60,8 +57,8 @@ player_tracking/
 ### ✅ Step 1: Clone the repository
 
 ```bash
-git clone https://github.com/your-repo/player_tracking.git
-cd player_tracking
+git clone https://github.com/KarthikeyatheDev/Player-ReID
+cd Player-ReID
 ```
 
 ### ✅ Step 2: Install dependencies
@@ -72,26 +69,24 @@ pip install -r requirements.txt
 
 ### ✅ Step 3: Add your YOLOv11 trained model
 
-Place your YOLO model (trained on players and ball) into the `models/` folder.  
-Example filename: **`yolo_model.pt`**
+Place your YOLO model (trained on players and ball) into the root folder.  
+Example filename: **`betst.pt`**
 
 ### ✅ Step 4: Add input video
 
-Put your input video into the `input_video/` folder.  
-Example: **`15sec_input.mp4`**
+Put your input video into the `Inputs/` folder.  
+Example: **`15sec_input_720.mp4`**
 
 ### ✅ Step 5: Run the tracker
 
-```bash
-python player_tracking.py
-```
+Click Run all in the Notebook.
 
 ### ✅ Step 6: Check output
 
 The output video will be saved in:
 
 ```
-output_video/output_reid.mp4
+Output/output_new.mp4
 ```
 
 Open with any media player (VLC, Windows Media Player, etc.).
@@ -100,8 +95,8 @@ Open with any media player (VLC, Windows Media Player, etc.).
 
 ## 💻 Environment Tips
 
-- 🚀 **GPU Recommended:** for faster processing (PyTorch + YOLO + TorchReID utilize CUDA if available).
-- ✅ Works on CPU but slower.
+- 🚀 **GPU Recommended:** for faster processing.(~5m)
+- ✅ Works on CPU but slower.(~24m)
 - 📦 Tested on:
   - Windows 10/11
 
