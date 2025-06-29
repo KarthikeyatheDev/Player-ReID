@@ -1,0 +1,13 @@
+# Ignore video files
+*.avi
+*.mov
+
+# Ignore model weights
+*.pt
+*.pkl
+*.h5
+
+
+# Other system files
+.DS_Store
+Thumbs.db
